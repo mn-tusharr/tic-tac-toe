@@ -1,18 +1,16 @@
 const boxes = document.querySelectorAll(".box");
 const reset = document.querySelector("#reset");
-
-let idx = 0;
-
-const mark = ["x","o"];
-
 const winPattern = ["123","456","789","147","258","369","159","357"];
+const mark = ["x","o"];
 
 let gameRunning = true;
 
-    //For alternating the X and O clicks 
-    // document.body.addEventListener("mouseover", ()=>{ //to rectify the double click problem during the first click
-    // })
+let idx = 0;
 
+//For alternating the X and O clicks 
+
+
+//Reset btn functionality - it resets event div to its original state
 reset.addEventListener("click", ()=>{
     boxes.forEach(element => {
         element.setAttribute("class", "box");
@@ -77,6 +75,7 @@ let checkWin = (i) =>{
     }
 }
 
+//self-developed function to search for a particular seq in a string.
 function isSubsequence(pattern, text) {
   let i = 0; // pattern pointer
   let j = 0; // text pointer
