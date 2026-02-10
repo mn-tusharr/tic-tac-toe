@@ -42,7 +42,7 @@ for (const box of boxes) {
 
 let checkWin = (i) =>{
     let text = "";
-    if(i==0){
+    if(i===0){
         let set = document.querySelectorAll(".x-mark");
         set.forEach(element => {
             text += element.getAttribute("id");
